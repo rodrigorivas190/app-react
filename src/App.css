@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background: linear-gradient(rgba(225, 227, 231, 0.5),rgba(225, 227, 231, 0.5)), url(./components/CartWidget/Assets/fondo.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 3.2;
+
+}
