@@ -1,9 +1,16 @@
 import './ItemDetail.css'
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap'
 import { ItemCount } from '../ItemCount/ItemCount'
 
 export const ItemDetail = ({ id, titulo, precio, descripcion, imagen, genero }) => {
+
+  const navigete = useNavigate()
+
+  const volverHaciaAtras = () => {
+    navigete(-1) 
+  }
   return (
     <div className='item'>
       <Card style={{ width: '20rem' }}>
@@ -17,7 +24,7 @@ export const ItemDetail = ({ id, titulo, precio, descripcion, imagen, genero }) 
           <ItemCount />
           <Button variant="primary">Agregar al carrito</Button>
         </Card.Body>
-        <Button   to="/" variant="primary">Volver a Inicio</Button>
+        <Button   onClick={volverHaciaAtras} variant="primary">Volver a Inicio</Button>
       </Card>
       
     </div>
