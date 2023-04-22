@@ -1,12 +1,48 @@
-import "./ItemListContainer.css";
+import React, { useEffect, useState } from 'react';
+// import {ImSpinner3} from 'react-icons/im'
+import { pedirProductos } from '../../helpers/pedirProductos';
+import { ItemList } from '../ItemList/ItemList';
+import './itenlistcontainer.css';
+import { useParams } from 'react-router-dom';
+import { Loader } from '../Loader/Loader';
+
+export const ItemListContainer = ({greating}) => {
+
+  const [items, setItems] = useState([])
+
+  const [loading, setLoading] = useState(false)
+
+  const {categoryId} = useParams()
 
 
-const ItemListContainer = ({ greeting }) => {
-    return( 
-        <div>
-            <h1>{greeting}</h1>
-        </div>
-    )
-}
+  useEffect(() =>{
+// iniciamos el efecto montaje, con un loading en "true"
+    setLoading(true)
+    pedirProductos()
+      .then((res) =>{
+        // Imprimos la respuesta y la guardamos en el hook
+        if(categoryId){
+          setItems(res.filter(prod => prod.genero === categoryId)  )
+        }else{
+          setItems(res)
+        }
+        // console.log(res)
+      })
+      // Consologueamos errores
+      .catch((error) => console.log(error))
+      .finally(() =>{setLoading(false)})
+  }, [categoryId])
 
-export default ItemListContainer
+
+
+
+  return (
+    <>
+    {/* Nuestro componente arranca con el loading en "true" y cuando resulve, imprime en pantalla todo nuestro componente ItemList (donde mapeamos cada uno de los productos) */}
+      {
+        loading
+        ?<div className='spinner'><Loader/></div>
+        : <ItemList productos={items}/>
+      }
+    </>
+  )}

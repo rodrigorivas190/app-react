@@ -1,27 +1,22 @@
-import CartWidget from "../CartWidget/CartWidget"
-import  "./NavBar.css";
+import React from 'react'
+import './navbar.css'
+import { Link } from 'react-router-dom'
+import { CartWidget } from '../CartWidget/CartWidget'
 
-const Navbar = () => {
+export const NavBar = () => {
     return (
-        <>
-
-        <nav className="NavBar d-flex justify-content-between bg-light ">
-            <h3>
-               Lea Liberias
-            </h3>
-            <div className='navBar--height'>
-                <button type="button" className="btn btn-secondary btn-lg m-2">Romance</button>
-                <button type="button" className="btn btn-secondary btn-lg m-2">Ficcion</button>
-                <button type="button" className="btn btn-secondary btn-lg m-2">Terror</button>
-                <button type="button" className="btn btn-secondary btn-lg m-2">Fantasia</button>
-            </div>
+        <nav className="NavBar d-flex justify-content-between bg-light">
+            {/* <Link to='/'>Logo</Link> */}
+            <Link className="btn btn-secondary btn-lg m-2" to="/">Librerias Lea</Link>
+        <div className="menu navBar--height">
+          
+            <Link className="btn btn-secondary btn-lg m-2" to='/productos/ROMANCE'>Romance</Link>
+            <Link className="btn btn-secondary btn-lg m-2" to='/productos/FICCION'>Ficcion</Link>
+            <Link className="btn btn-secondary btn-lg m-2" to='/productos/TERROR'>Terror</Link>
+            <Link className="btn btn-secondary btn-lg m-2" to='/productos/FANTASIA'>Fantasia</Link>
             
-            <CartWidget />
-
-
+        </div>
+        <Link className='link' to='/cart'><CartWidget/></Link>
         </nav>
-
-        </>
     )
 }
-export default Navbar
