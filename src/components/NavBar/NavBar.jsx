@@ -6,7 +6,6 @@ import { CartWidget } from '../CartWidget/CartWidget'
 export const NavBar = () => {
     return (
         <nav className="NavBar d-flex justify-content-between bg-light">
-            {/* <Link to='/'>Logo</Link> */}
             <Link className="btn btn-secondary btn-lg m-2" to="/">Librerias Lea</Link>
         <div className="menu navBar--height">
           
