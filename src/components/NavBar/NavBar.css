@@ -3,6 +3,8 @@
     color: rgb(16, 227, 213);
     text-decoration: none;
     font-weight: 900;
+    
+    /* padding-left: 550px; */
 }
 .link:hover{
     color: gold;
@@ -10,7 +12,7 @@
 .NavBar {
     background-color: rgb(136, 135, 141);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .navBar--height{
     height: 4.3rem;
@@ -21,6 +23,13 @@
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-weight: 700;
-    line-height: 2.2;
+    /* line-height: 2.2; */
   
   }
+/* .btn {
+    display: flex;
+} */
+.dropdown-menu {
+    --bs-dropdown-item-padding-x: 0rem;
+    --bs-dropdown-item-padding-y: 0rem;
+}

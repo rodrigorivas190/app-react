@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import './CartWidget.css'
+import "./CartWidget.css";
+import { CartContext } from "../context/CartContext";
 
 export const CartWidget = () => {
+  const { calcularCantidad } = useContext(CartContext);
+
   return (
     <>
-    <FaShoppingCart className="carrito"/>
-    <span className=" position-relative badge rounded-pill bg-secondary ">0</span>
+      <FaShoppingCart className="carrito" />
+      <span>{calcularCantidad()}</span>
     </>
-  )
-}
+  );
+};

@@ -42,7 +42,8 @@ export const stock = [
         descripcion : "Novelas De Amor",
         idioma : "ESPANOL",
         cantidad : 1,
-        precio : 1780
+        precio : 1780,
+        stock : 20
     },
     {
         id : 4,
@@ -53,6 +54,7 @@ export const stock = [
         idioma : "INGLES",
         cantidad : 1,
         precio : 4320,
+        stock : 20
     },
     {
         id : 5,
@@ -62,7 +64,8 @@ export const stock = [
         descripcion : "Crímenes Y Misterios",
         idioma : "INGLES",
         cantidad : 1,
-        precio : 2699
+        precio : 2699,
+        stock : 20
     },
     {
         id : 6,
@@ -72,7 +75,8 @@ export const stock = [
         descripcion : "Fantasía",
         idioma : "INGLES",
         cantidad : 1,
-        precio : 4491
+        precio : 4491,
+        stock : 20
     },
     {
         id : 7,
@@ -82,7 +86,8 @@ export const stock = [
         descripcion : "Una maldición oscura",
         idioma : "INGLES",
         cantidad : 1,
-        precio : 3814
+        precio : 3814,
+        stock : 20
     },
     {
         id : 8,
@@ -92,7 +97,8 @@ export const stock = [
         descripcion : "Ficción Infantil Y Juvenil",
         idioma : "ESPANOL",
         cantidad : 1,
-        precio : 4730
+        precio : 4730,
+        stock : 20
     },
     {
         id : 9,
@@ -102,7 +108,8 @@ export const stock = [
         imagen : "../imagenes/EN LA SOMBRA.jpg",
         descripcion : "AUTOBIOGRAFIA",
         cantidad : 1,
-        precio : 8559
+        precio : 8559,
+        stock : 20
     },
 ]
 export default stock
