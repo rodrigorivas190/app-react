@@ -7,7 +7,7 @@ Cuenta con un sistema de filtrado por categoria de los productos y un formulario
 Los datos correspondientes a los articulos seleccionados tanto como los datos solicitados mediante el formulario son almacenados en una base de datos creada en Firebase.
 
 
-![image](public/libreria.mp4)
+![image](../pre%20entrega1%20rodrigo%20rivas/public/libreria.mp4)
 
 ## Empezamos! 🚀
 
