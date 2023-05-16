@@ -4,65 +4,70 @@ import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
+import { Container } from "react-bootstrap";
 
 export const NavBar = () => {
   return (
-    <nav className="NavBar d-flex between bg-light">
-      <Navbar className="NavBar d-flex justify-content-between bg-light">
-        <Link className="btn btn-secondary btn-lg m-2" to="/">
-          Libros
-        </Link>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <NavDropdown className="btn btn-secondary btn-lg m-2" title="Genero">
-          <NavDropdown.Item>
-            <Link
-              className="btn btn-secondary btn-lg m-2"
-              to="/productos/ROMANCE"
-            >
-              Romance
-            </Link>
-          </NavDropdown.Item>
-          <NavDropdown.Item>
-            <Link
-              className="btn btn-secondary btn-lg m-2"
-              to="/productos/FICCION"
-            >
-              Ficcion
-            </Link>
-          </NavDropdown.Item>
-          <NavDropdown.Item>
-            <Link
-              className="btn btn-secondary btn-lg m-2"
-              to="/productos/TERROR"
-            >
-              Terror
-            </Link>
-          </NavDropdown.Item>
-          <NavDropdown.Item>
-            <Link
-              className="btn btn-secondary btn-lg m-2"
-              to="/productos/FANTASIA"
-            >
-              Fantasia
-            </Link>
-          </NavDropdown.Item>
-        </NavDropdown>
-        <div className="d-flex justify-end">
-          <Link className="link" to="/cart">
-            <CartWidget />
+    <>
+      <Navbar bg="light">
+        <Container className="navBar--height">
+          <Link to="/">
+            <Navbar.Brand>
+              <img
+                className="imagen"
+                src="../imagenes/SIGUE MI VOZ.jpg"
+                alt="LibreriasLea"
+              />
+            </Navbar.Brand>
           </Link>
-        </div>
+
+          <NavDropdown className="btn btn-secondary btn-lg m-2" title="Genero">
+            <NavDropdown.Item>
+              <Link
+                className="btn btn-secondary btn-lg m-2"
+                menuVariant="dark"
+                to="/productos/ROMANCE"
+              >
+                Romance
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link
+                className="btn btn-secondary btn-lg m-2"
+                to="/productos/FICCION"
+              >
+                Ficcion
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link
+                className="btn btn-secondary btn-lg m-2"
+                to="/productos/TERROR"
+              >
+                Terror
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link
+                className="btn btn-secondary btn-lg m-2"
+                to="/productos/FANTASIA"
+              >
+                Fantasia
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link className="btn btn-secondary btn-lg m-2" to="/">
+                Todos los libros
+              </Link>
+            </NavDropdown.Item>
+          </NavDropdown>
+          <div className="d-flex justify-end">
+            <Link className="link" to="/cart">
+              <CartWidget />
+            </Link>
+          </div>
+        </Container>
       </Navbar>
-    </nav>
+    </>
   );
 };

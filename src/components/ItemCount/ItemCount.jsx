@@ -10,29 +10,17 @@ export const ItemCount = ({ max, cantidad, modify }) => {
     }
   };
   const restar = () => {
-    if (cantidad > 0) {
+    if (cantidad > 1) {
       modify(cantidad - 1);
     }else
     Swal.fire({
       icon: "error",
-      title: "La cantidad no puede ser menor a cero",
+      title: "La cantidad no puede ser menor a uno",
       showConfirmButton: false,
       timer: 1000,
-    });
-    
+    }); 
   }
   
-
-  // return (
-  //   <>
-  //     <h4> {cantidad}</h4>
-  //     <div>
-  //       <button onClick={restar}>➖</button>
-
-  //       <button onClick={sumar}>➕</button>
-  //     </div>
-  //   </>
-  // );
   return (
     <>        
     <div className='itemcount-btn'>
@@ -41,13 +29,7 @@ export const ItemCount = ({ max, cantidad, modify }) => {
             <h4>{cantidad}</h4>
             <button onClick = {sumar}><h3><RxPlus /></h3></button>
         </div>
-       {/*  <div className='itemcount-btn-right'>
-            <button onClick ={addOn}>Agregar al carrito</button>
-        </div> */}
     </div>
     </>
 );
-
-
-
 };

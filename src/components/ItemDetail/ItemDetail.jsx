@@ -7,6 +7,7 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
+
 export const ItemDetail = ({
   id,
   name,
@@ -20,14 +21,12 @@ export const ItemDetail = ({
   const navigete = useNavigate();
 
   const volverHaciaAtras = () => {
-    navigete(-1);
+    navigete(-2);
   };
 
   const { addToCart } = useContext(CartContext);
 
-  // __________________________________
-
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
   const sumarAlCarrito = () => {
     const newItem = {
@@ -39,6 +38,7 @@ export const ItemDetail = ({
       imagen,
       genero,
       counter,
+      stock,
     };
     console.log(newItem);
     addToCart(newItem);
@@ -55,11 +55,11 @@ export const ItemDetail = ({
       <Card style={{ width: "20rem" }}>
         <Card.Img variant="top" src={imagen} />
         <Card.Body>
-          {/* <Card.Title>{id}</Card.Title> */}
           <Card.Title>{titulo}</Card.Title>
-          <Card.Title>{precio}</Card.Title>
+          <Card.Title>$ {precio}</Card.Title>
           <Card.Title>{descripcion}</Card.Title>
           <Card.Title>Categoria: {genero}</Card.Title>
+          <Card.Text className="mb1-0 text-center"> Stock: {stock} unidades </Card.Text>
           <ItemCount max={stock} modify={setCounter} cantidad={counter} />
           <Button onClick={sumarAlCarrito}>Agregar al carrito</Button>
         </Card.Body>
