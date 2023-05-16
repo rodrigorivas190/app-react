@@ -2,9 +2,9 @@
 
 LibreriasLea! es un proyecto final de react. Es un e-comers virtual, en donde los usuarios pueden crearse una cuenta y comprar los mejores libros del mercado. Cada usuario es capaz de realizar la compra y seguir el envio. En este proyecto, se realizó otra rama llamada firebase es una base de datos donde guardamos todos los registros realizados por el usuario.
 
-### Cuenta con un sistema de filtrado por categoria de los productos y un formulario de contacto para que los representantes de venta se comuniquen con los clientes.
+Cuenta con un sistema de filtrado por categoria de los productos y un formulario de contacto para que los representantes de venta se comuniquen con los clientes.
 
-### Los datos correspondientes a los articulos seleccionados tanto como los datos solicitados mediante el formulario son almacenados en una base de datos creada en Firebase.
+Los datos correspondientes a los articulos seleccionados tanto como los datos solicitados mediante el formulario son almacenados en una base de datos creada en Firebase.
 
 
 ![image](public/librerialea.mp4)
@@ -30,9 +30,6 @@ Instalar dependencias
 ## Tecnologías 🛠️
 
 Este proyecto fue realizado por las siguientes tecnologías
-
-
-* [Node.js](https://nodejs.org/en/) - Entorno de ejecución para JavaScript
 
 **Frontend:** React + React Bootstrap
 
